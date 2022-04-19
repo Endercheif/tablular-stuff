@@ -78,17 +78,44 @@ section.table {
 
 
 .controls {
-  // border: 1px solid;
+  // border: 2px solid var(--bg);
+  border-radius: 5px;
+
+  background-color: rgb(138, 236, 138);
+
   width: fit-content;
   margin: 5px auto;
   margin-bottom: 10em;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  button {
-    font-size: 1rem;
+  .subcontrols {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;    
+  }
 
-    height: 3em;
-    width: 7em;
+  button, input {
+    font-size: 0.9rem;
+
+    height: 3rem;
+    min-width: calc(50% - 9px);
     margin: 3px;
+
+    border: none;
+    border-radius: 5px;
+
+    text-align: center;
+
+    
+  }
+
+  input {
+    font-size: 0.8rem;
   }
 
 }
