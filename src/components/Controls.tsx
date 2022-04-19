@@ -6,6 +6,7 @@ export default function Controls({
 }: {
   tableHook: useTableDataType;
 }) {
+  let temp;
   const [name, setName] = useState<string>("");
 
   return (
@@ -33,7 +34,16 @@ export default function Controls({
       >
         New Table
       </button>
-      <button onClick={() => tableHook.addPerson(name)}>New Person</button>
+      <button
+        onClick={() => {
+          tableHook.addPerson(name);
+          temp = JSON.stringify(tableHook.data);
+          tableHook.setData([]);
+          tableHook.setData(JSON.parse(temp));
+        }}
+      >
+        New Person
+      </button>
       <input
         type="text"
         name="name"
