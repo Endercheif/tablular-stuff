@@ -4,7 +4,7 @@ import { insert, translateNamedIndex, translateNumberIndex } from ".";
 import { dummy } from "./dummy";
 
 export function useTableData(): useTableDataType {
-  const [data, setData] = useState<TableSet>(dummy);
+  const [data, setData] = useState<TableSet>([{id: crypto.randomUUID(), table: []}]);
 
   (window as any).data = data;
 
