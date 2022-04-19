@@ -1,5 +1,5 @@
 import "./App.scss";
-import Tables from "@/components/Tables";
+import Tables from "./components/Tables";
 import { useTableData } from "./utils";
 import Controls from "./components/Controls";
 
